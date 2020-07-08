@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Tranquilizerz</name>
+	<author>RE6AL</author>
+  <packageId>R.Tranquilizerz</packageId>
+	<url>https://twitter.com/tikubonn</url>
+	<description>Code unashamingly copied from original mod, retextured, added pistol with code copied code from CP Metal Gear. Added Combat Extended patch BUT IT WORKS TOO POWERFUL. I DESPERATELY NEED HELP WITH THIS MOD. the code taken from original Combat Extended patch folder of Metal Gear.</description>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+  </supportedVersions>
+  <modDependencies></modDependencies>
+	<loadBefore></loadBefore>
+	<loadAfter>
+		<li>Orion.MoreMechanoids</li>
+		<li>Helixien.HereticMechanoids</li>
+	</loadAfter>
+	<incompatibleWith></incompatibleWith>
+</ModMetaData>

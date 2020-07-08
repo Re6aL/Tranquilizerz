@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>AmmoAnesthesizeGun</defName>
+        <label>Anest Caliber</label>
+        <parent>Ammo</parent>
+        <iconPath>Caliber/Ammoanest</iconPath>
+    </ThingCategoryDef>
+
+
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_Anest</defName>
+        <label>Anestesize Ammo</label>
+        <ammoTypes>
+            <Ammo_Anest>Bullet_AL_Anest</Ammo_Anest>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="SmallAmmoBase">
+        <defName>Ammo_Anest</defName>
+        <label>Anestesize Ammo</label>
+        <description>An ammo for Anesthesize guns.</description>
+        <graphicData>
+            <texPath>Ammo/Rifle/Syr</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.2</Mass>
+            <Bulk>0.01</Bulk>
+            <MarketValue>0.2</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <thingCategories>
+            <li>AmmoAnest</li>
+        </thingCategories>
+        <ammoClass>BuckShot</ammoClass>
+        <cookOffProjectile>Bullet_AL_Anest</cookOffProjectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseBullet">
+        <defName>Bullet_AL_Anest</defName>
+        <label>Anesthetic Bullet</label>
+        <graphicData>
+            <texPath>Projectile/Syr</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <speed>40</speed>
+            <dropsCasings>true</dropsCasings>
+            <damageAmountBase>1</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+        </projectile>
+        
+    </ThingDef>
+
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_Anesthesize_Syringe</defName>
+        <label>make Anestesize Ammo x5</label>
+        <description>Craft 5 anest syringes.</description>
+        <jobString>Making anest syringes.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Cloth</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Cloth</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_NetGun_Net>5</Ammo_NetGun_Net>
+        </products>
+        <workAmount>250</workAmount>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="HRHM_Mech_Zealot"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>HRHM_Mech_Zealot</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="HRHM_Mech_Ranger"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>HRHM_Mech_Ranger</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="HRHM_Mech_Warrior"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>HRHM_Mech_Warrior</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="HRHM_Mech_Hunter"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>HRHM_Mech_Hunter</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+</Patch>

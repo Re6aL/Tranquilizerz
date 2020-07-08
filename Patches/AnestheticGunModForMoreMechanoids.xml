@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  
+	<!-- for more mechanoids 1.1 -->
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="Mech_Crawler"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>Mech_Crawler</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="Mech_Skullywag"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>Mech_Skullywag</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="Mech_Flamebot"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>Mech_Flamebot</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="Mech_Assaulter"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>Mech_Assaulter</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PawnKindDef[defName="Mech_Mammoth"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Bullet_AnestheticGun"]/anestheticBulletExcludedes</xpath>
+				<value>
+					<li><pawnKindDef>Mech_Mammoth</pawnKindDef></li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

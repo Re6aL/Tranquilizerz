@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Tranquilizerz</modName>
+      </li>
+
+      <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="AL_Gun_AnestheticGun"]/tools</xpath>
+          <value>
+        <tools>
+          <li Class="CombatExtended.ToolCE">
+            <label>stock</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8</power>
+            <cooldownTime>1.55</cooldownTime>
+            <chanceFactor>1.5</chanceFactor>
+            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+          </li>
+          <li Class="CombatExtended.ToolCE">
+            <label>barrel</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>5</power>
+            <cooldownTime>2.02</cooldownTime>
+            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+          </li>
+          <li Class="CombatExtended.ToolCE">
+            <label>muzzle</label>
+            <capacities>
+              <li>Poke</li>
+            </capacities>
+            <power>8</power>
+            <cooldownTime>1.55</cooldownTime>
+            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+          </li>
+        </tools>
+      </value>
+      </li>
+
+      <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+          <defName>AL_Gun_AnestheticGun</defName>
+          <statBases>
+              <Mass>3.2</Mass>
+              <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+              <SightsEfficiency>0.93</SightsEfficiency>
+              <ShotSpread>0.176</ShotSpread>
+              <SwayFactor>1.15</SwayFactor>
+              <Bulk>5.1</Bulk>
+              <WorkToMake>12000</WorkToMake>
+          </statBases>
+          <Properties>
+          <recoilAmount>1.4</recoilAmount>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_AL_Anest</defaultProjectile>
+              <warmupTime>0.82</warmupTime>
+              <range>32</range>
+              <soundCast>Shot_IncendiaryLauncher</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <muzzleFlashScale>9</muzzleFlashScale>
+          </Properties>
+          <AmmoUser>
+              <magazineSize>8</magazineSize>
+              <reloadTime>4</reloadTime>
+              <ammoSet>AmmoSet_Anest</ammoSet>
+          </AmmoUser>
+          <FireModes>
+              <aiAimMode>AimedShot</aiAimMode>
+          </FireModes>
+          <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

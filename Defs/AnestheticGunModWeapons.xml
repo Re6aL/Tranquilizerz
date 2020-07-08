@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>AL_Gun_AnestheticGun</defName>
+		<label>Tranquilizer gun</label>
+		<description>An ancient pattern bolt-action rifle. This shoot the anesthetic bullet. It is low power, but it can neutralize the target with less damage.</description>
+		<graphicData>
+			<texPath>AnestheticGun/AnestheticGun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3.8</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.80</AccuracyLong>
+      <!-- <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown> -->
+			<!-- <RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown> -->
+			<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+			<MedicineIndustrial>3</MedicineIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AnestheticGun</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>36.9</range>
+        <soundCast>Shot_AL_Tranq</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>AL_Gun_AnestheticPistol</defName>
+    <label>Tranquilizer pistol</label>
+    <description>This uses tranquilizer darts.</description>
+    <graphicData>
+      <texPath>AnestheticGun/AnestheticPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>1.0</Mass>
+      <AccuracyTouch>0.84</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.44</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <MedicineIndustrial>3</MedicineIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AnestheticGun</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>26</range>
+        <soundCast>Shot_AL_Tranq</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>2</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>
